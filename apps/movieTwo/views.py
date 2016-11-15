@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from .models import People
 # Create your views here.
-def index(requuest):
-    people.objects.create(first_name="Miguel", last_name="Acosta")
-    people = people.objects.all()
+def index(request):
+    People.objects.create(first_name = "Miguel", last_name = "Acosta")
+    people = People.objects.all()
     print (people)
-    render(request,"movieTwo/index.html")
+    return render(request,"movieTwo/index.html")
